@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { MdKeyboardArrowDown } from 'react-icons/md';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai';
 

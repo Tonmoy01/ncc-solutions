@@ -7,7 +7,7 @@ const Content = () => {
   return (
     <>
       <div className='max-w-[1300px] m-auto py-16'>
-        <h2 className='text-3xl font-semibold text-center'>
+        <h2 className='text-3xl font-semibold text-center font-lato'>
           We support individuals with developmental disabilities to live their{' '}
           <br />
           best lives.

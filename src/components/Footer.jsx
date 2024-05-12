@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='max-w-[1300px] mx-auto'>
       <div className='flex flex-col items-center gap-10 mt-10 sm:flex-row sm:justify-center sm:gap-20'>
-        <img className='w-40 sm:w-72' src={logo} alt='Logo' />
+        <img className='w-40 sm:w-96' src={logo} alt='Logo' />
         <div className='text-center sm:text-left'>
           <p className='font-bold'>Our Address</p>
           <p>12627 York Road</p>

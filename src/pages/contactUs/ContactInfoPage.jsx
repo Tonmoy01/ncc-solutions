@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const ContactInfoPage = () => {
@@ -10,6 +11,7 @@ const ContactInfoPage = () => {
 
   const faqData = [
     {
+      id: uuidv4(),
       question: 'General Inquiries',
       answer: [
         'Our main office is located at 12627 York Road, North Royalton, Ohio 44133.',
@@ -17,6 +19,7 @@ const ContactInfoPage = () => {
       ],
     },
     {
+      id: uuidv4(),
       question: 'Families',
       answer: [
         "To learn more about our services, supports, and available homes, please don't hesitate to reach out to Melanie Stoll, our Director of Operations.",
@@ -27,6 +30,7 @@ const ContactInfoPage = () => {
       ],
     },
     {
+      id: uuidv4(),
       question: 'Employment',
       answer: [
         'For job seekers and employment inquiries, please feel free to get in touch with us during our standard office hours.',
@@ -41,7 +45,7 @@ const ContactInfoPage = () => {
   return (
     <div className='max-w-[90%] mx-auto mt-8'>
       {faqData.map((faq, index) => (
-        <div key={index} className={`mb-4 ${index !== 0 ? 'border-t' : ''}`}>
+        <div key={faq.id} className={`mb-4 ${index !== 0 ? 'border-t' : ''}`}>
           <button
             onClick={() => toggleAccordion(index)}
             className='w-full px-4 py-2 text-left focus:outline-none'

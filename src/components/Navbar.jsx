@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '@assets/logo.png';
-import { FaAngleDown } from 'react-icons/fa';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -93,9 +93,9 @@ const Navbar = () => {
               <li className='relative text-primaryColor group' key={id}>
                 <div className='flex items-center gap-2 cursor-pointer hover:text-gray-300'>
                   <p className='text-sm'>{title}</p>
-                  <FaAngleDown className='text-sm font-light' />
+                  <MdKeyboardArrowDown className='text-sm font-light' />
                 </div>
-                <div className='absolute right-0 invisible text-right transition-opacity duration-300 bg-white rounded-lg shadow-lg top-[120%] w-60 group-hover:visible z-50'>
+                <div className='absolute right-0 invisible text-right transition-opacity duration-300 bg-white rounded-lg shadow-lg top-[105%] w-60 group-hover:visible z-50'>
                   {subTitle.map(({ id, name, target }) => (
                     <Link
                       to={target}
@@ -108,7 +108,7 @@ const Navbar = () => {
                 </div>
               </li>
             ))}
-            <button className='flex px-4 py-2 ml-5 text-white rounded-md bg-primaryColor'>
+            <button className='flex px-4 py-2 ml-5 font-semibold text-white uppercase rounded-md bg-primaryColor hover:opacity-65'>
               Donate
             </button>
           </ul>

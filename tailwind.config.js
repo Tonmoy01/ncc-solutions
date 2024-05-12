@@ -8,12 +8,9 @@ export default {
         secondaryColor: '#205C9E',
         btnYellow: '#EAC94A',
         textBlue: '#1D6AB8',
+        textBlack: '#212121',
         textGray: '#2c3e50',
         bgGray: '#CCD0D4',
-      },
-      fontFamily: {
-        lato: 'Lato',
-        montserrat: 'Montserrat',
       },
     },
   },
