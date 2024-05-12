@@ -6,7 +6,7 @@ import Quots from './Quots';
 const Content = () => {
   return (
     <>
-      <div className='container m-auto p-28'>
+      <div className='max-w-[1300px] m-auto py-16'>
         <h2 className='text-3xl font-semibold text-center'>
           We support individuals with developmental disabilities to live their{' '}
           <br />
