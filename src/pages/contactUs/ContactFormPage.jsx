@@ -3,8 +3,7 @@ import emailjs from '@emailjs/browser';
 import InputForm from '../../components/contactForm/InputForm';
 
 const ContactFormPage = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
@@ -15,11 +14,8 @@ const ContactFormPage = () => {
   const validateForm = () => {
     const errors = {};
 
-    if (firstName.trim() === '') {
-      errors.firstName = 'First Name is required';
-    }
-    if (lastName.trim() === '') {
-      errors.lastName = 'Last Name is required';
+    if (fullName.trim() === '') {
+      errors.fullName = 'First Name is required';
     }
     if (email.trim() === '') {
       errors.email = 'Email is required';
@@ -46,7 +42,7 @@ const ContactFormPage = () => {
 
     // Send email using emailjs
     const templateParams = {
-      from_name: `${firstName} ${lastName}`,
+      from_name: 'Tonmoy Khan',
       email: email,
       subject: subject,
       message: message,
@@ -66,8 +62,7 @@ const ContactFormPage = () => {
         console.log('Email sent successfully!', response);
         console.log(data);
         // Reset form fields
-        setFirstName('');
-        setLastName('');
+        setFullName('');
         setEmail('');
         setSubject('');
         setMessage('');
@@ -85,32 +80,18 @@ const ContactFormPage = () => {
         <legend>
           Name <span className='text-sm text-gray-400'>(required)</span>
         </legend>
-        <div className='grid grid-cols-2 gap-4'>
-          <InputForm
-            type={'text'}
-            id={'firstName'}
-            name={'firstName'}
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            className={`block w-full p-2 mt-1 border-[1px] shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-[#a9a9a9] ${
-              errors.firstName ? 'border-red-500' : ''
-            }`}
-            label={'First Name'}
-            error={errors.firstName}
-          />
-          <InputForm
-            type={'text'}
-            id={'lastName'}
-            name={'lastName'}
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            className={`block w-full p-2 mt-1 border-[1px] shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-[#a9a9a9] ${
-              errors.lastName ? 'border-red-500' : ''
-            }`}
-            label={'Last Name'}
-            error={errors.lastName}
-          />
-        </div>
+        <InputForm
+          type={'text'}
+          id={'fullName'}
+          name={'fullName'}
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+          className={`block w-full p-2 mt-1 border-[1px] shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-[#a9a9a9] ${
+            errors.fullName ? 'border-red-500' : ''
+          }`}
+          label={'Full Name'}
+          error={errors.fullName}
+        />
         <InputForm
           type={'email'}
           id={'email'}

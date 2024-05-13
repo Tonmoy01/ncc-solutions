@@ -2,7 +2,7 @@ import heroImage from '../../assets/hero.jpeg';
 
 const JobListingpage = () => {
   return (
-    <div className='bg-green-300'>
+    <div className='pb-10 bg-bodyColor'>
       <div
         className='relative bg-center bg-cover'
         style={{
@@ -19,7 +19,7 @@ const JobListingpage = () => {
       </div>
 
       <div className='max-w-[1300px] mx-auto mt-12'>
-        <div className='py-3 bg-gray-300'>
+        <div className='py-3 bg-gray-200'>
           <div className='flex justify-between px-8'>
             <h3 className='font-semibold text-textLightGray text-medium'>
               Job, Post Date, Department
@@ -30,7 +30,7 @@ const JobListingpage = () => {
           </div>
         </div>
 
-        <div className='p-8 border-b bg-bodyColor'>
+        <div className='p-8 bg-white border-b'>
           <div className='flex justify-between'>
             <h3 className='text-base font-semibold text-textBlue'>Driver</h3>
             <p className='font-light text-textLightGray'>Main Campus</p>
@@ -41,13 +41,13 @@ const JobListingpage = () => {
             </p>
           </div>
           <div className='mt-3'>
-            <p>
+            <p className='text-textLightGray'>
               <span className='font-semibold'>Brief</span>: Lorem ipsum dolor
               sit amet consectetur adipisicing elit. Cum, accusamus.
             </p>
           </div>
         </div>
-        <div className='p-8 border-b bg-bodyColor'>
+        <div className='p-8 bg-white border-b'>
           <div className='flex justify-between'>
             <h3 className='text-base font-semibold text-textBlue'>Driver</h3>
             <p className='font-light text-textLightGray'>Main Campus</p>
