@@ -1,17 +1,3 @@
-// const InputForm = ({ type, id, name, value, onChange, className }) => {
-//   return (
-//     <input
-//       type={type}
-//       id={id}
-//       name={name}
-//       value={value}
-//       onChange={onChange}
-//       className={className}
-//     />
-//   );
-// };
-// export default InputForm;
-
 import React from 'react';
 
 const InputForm = ({

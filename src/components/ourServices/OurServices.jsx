@@ -23,7 +23,7 @@ const OurServices = () => {
   ];
 
   return (
-    <div className='mt-8'>
+    <div className='px-4 mt-8 md:px-0'>
       <h3 className='my-5 text-2xl font-lato'>
         <strong className='text-textGray'>Our Services</strong>
       </h3>
@@ -32,8 +32,8 @@ const OurServices = () => {
         disabilities, including:
       </p>
 
-      <div className='mt-5'>
-        <ul className='ml-14'>
+      <div className='pb-6 mt-5'>
+        <ul className='px-4 md:ml-14 md:px-0'>
           {services.map(({ id, title, description }) => (
             <li key={id} className='my-4 list-disc'>
               <strong>{title}</strong> {description}

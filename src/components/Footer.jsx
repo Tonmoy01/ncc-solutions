@@ -22,7 +22,7 @@ const Footer = () => {
           <p>Sa-Su: Closed</p>
         </div>
       </div>
-      <p className='mt-5 mb-10 text-center'>
+      <p className='px-4 mt-5 mb-10 text-center md:px-0'>
         <Link to='/' className='text-blue-700 underline'>
           Accessibility Statement
         </Link>{' '}

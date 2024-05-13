@@ -55,7 +55,7 @@ const VisionAccordion = () => {
   ];
 
   return (
-    <div className='max-w-[1300px] mx-auto mt-8'>
+    <div className='max-w-[1300px] mx-auto mt-8 px-4 md:px-0'>
       {faqData.map((faq, index) => (
         <div key={index} className={`mb-4 ${index !== 0 ? 'border-t' : ''}`}>
           <button

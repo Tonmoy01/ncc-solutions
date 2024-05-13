@@ -6,16 +6,13 @@ import Quots from './Quots';
 const Content = () => {
   return (
     <>
-      <div className='max-w-[1300px] m-auto py-16'>
-        <h2 className='text-3xl font-semibold text-center font-lato'>
+      <div className='max-w-[1300px] mx-auto py-16 px-4 sm:px-6 lg:px-8'>
+        <h2 className='text-2xl text-[#2c3e50] font-semibold text-center sm:text-3xl leading-7'>
           We support individuals with developmental disabilities to live their{' '}
           <br />
           best lives.
         </h2>
-        <p className='mt-10 font-semibold text-center'>
-          Call: <span className='underline'>440-582-3300</span>
-        </p>
-        <p className='mt-10'>
+        <p className='mt-6 leading-6 text-textBlack'>
           NCC Solutions, Inc. is a non-profit organization that provides housing
           and support services to individuals with developmental disabilities,
           enabling them to live their best lives in a community setting. We are
@@ -25,19 +22,19 @@ const Content = () => {
           team spirit among staff, and providing a friendly and welcoming
           environment for our clients and their visitors.
         </p>
-        <p className='mt-5'>
+        <p className='mt-4 leading-6 text-textBlack'>
           We understand that transitions can be difficult, so we strive to
           facilitate that process in an informed and comfortable way for our
           individuals and their families.
         </p>
       </div>
 
-      <div className='max-w-[1400px] flex gap-3 mx-auto '>
+      <div className='max-w-[1400px] flex flex-col sm:flex-row gap-3 mx-auto px-5 md:px-0'>
         <Card img={card1} text={'View Our Services'} />
         <Card img={card2} text={'Apply to Work Here'} />
       </div>
 
-      <div>
+      <div className='py-2'>
         <Quots />
       </div>
     </>

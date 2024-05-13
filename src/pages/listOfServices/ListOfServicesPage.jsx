@@ -6,7 +6,7 @@ import card2 from '../../assets/card2.jpeg';
 import ContentCard from '../../components/reusable/ContentCard';
 import { v4 as uuidv4 } from 'uuid';
 
-const AgencyPage = () => {
+const ListOfServicesPage = () => {
   const contentData = [
     {
       id: uuidv4(),
@@ -50,7 +50,7 @@ const AgencyPage = () => {
         {/* Overlay */}
         <div className='container relative px-4 py-12 mx-auto md:py-24'>
           <h2 className='text-3xl font-semibold text-center text-white uppercase font-lato'>
-            About Us
+            List Of Services
           </h2>
         </div>
       </div>
@@ -69,4 +69,4 @@ const AgencyPage = () => {
   );
 };
 
-export default AgencyPage;
+export default ListOfServicesPage;

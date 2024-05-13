@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import InputForm from '../../components/contactForm/InputForm';
 
 const ContactFormPage = () => {
@@ -8,6 +9,8 @@ const ContactFormPage = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
+
+  const form = useRef();
 
   const validateForm = () => {
     const errors = {};
@@ -41,28 +44,44 @@ const ContactFormPage = () => {
       return;
     }
 
-    // Your logic to handle form submission
-    console.log({
-      firstName,
-      lastName,
-      email,
-      subject,
-      message,
-    });
+    // Send email using emailjs
+    const templateParams = {
+      from_name: `${firstName} ${lastName}`,
+      email: email,
+      subject: subject,
+      message: message,
+    };
 
-    // Reset form fields
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
-    setErrors({});
+    emailjs
+      .sendForm(
+        'service_bei71eu',
+        'template_phbaehv',
+        form.current,
+        {
+          publicKey: '3NowoVJsL0sIl8GR_',
+        },
+        templateParams
+      )
+      .then((response, data) => {
+        console.log('Email sent successfully!', response);
+        console.log(data);
+        // Reset form fields
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+        setErrors({});
+      })
+      .catch((error) => {
+        console.error('Email send failed:', error);
+      });
   };
 
   return (
     <div className='max-w-[1300px] p-8 mx-auto'>
       <h1 className='mb-4 text-2xl font-bold'>Contact Us</h1>
-      <form onSubmit={handleSubmit} className='space-y-4'>
+      <form ref={form} onSubmit={handleSubmit} className='space-y-4'>
         <legend>
           Name <span className='text-sm text-gray-400'>(required)</span>
         </legend>
